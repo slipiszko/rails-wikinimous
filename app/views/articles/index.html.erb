@@ -1,0 +1,17 @@
+<h1 style="margin-left: 40px">Articles</h1>
+<div style="margin-left: 40px">
+  <%= link_to '+Add Article', new_article_path %>
+</div>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <h2><%= link_to article.title, article  %></h2>
+      <h4><%= article.content %></h4>
+      <p><%= link_to 'Delete',
+      article_path(article),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
+    </li>
+  <% end %>
+</ul>

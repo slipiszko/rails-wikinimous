@@ -1,0 +1,10 @@
+
+<div style="text-align: center">
+  <h1 style="margin-bottom: 24px">Article</h1>
+  <img src="https://source.unsplash.com/random/600x400" alt="#">
+  <h2><%= @article.title %></h2>
+  <p><%= @article.content %></p>
+  <%= link_to 'Edit', edit_article_path  %>
+  <br>
+  <%= link_to 'Home', articles_path  %>
+</div>
